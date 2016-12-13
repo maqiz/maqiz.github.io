@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>my blog</title>
+		<title>puulpage</title>
 		<link rel="stylesheet" href="css/jquery.fullPage.css" />
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
-		<script type="text/javascript" src="js/jquery.fullPage.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.fullPage.js" ></script>
 		<style>
 		html,body,div,ul,li,a,p,header,footer{padding: 0;margin: 0;}
 		ul,li{list-style-type: none;}
@@ -64,7 +64,10 @@
 	$(function(){
 		$('#dowebok').fullpage({
 			sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+			continuousVertical: true,
+			anchors: ['page1', 'page2', 'page3', 'page4'],
 			'navigation': true,
+			scrollingSpeed :700,
 			afterLoad: function(anchorLink, index){
 				if(index == 2){
 					$('.section2').find('p').delay(500).animate({
